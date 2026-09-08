@@ -12,7 +12,7 @@ public class KafkaBenchmarkProducer {
     public static void main(String[] args) {
 
         Properties properties = new Properties();
-        //String message = "A".repeat(1000);
+
 
         properties.put("bootstrap.servers", "localhost:9092");
 
@@ -48,7 +48,6 @@ public class KafkaBenchmarkProducer {
             producer.send(record);
         }
 
-        //  ждём завершения всех отправок
         producer.flush();
 
         long endTime = System.nanoTime();
